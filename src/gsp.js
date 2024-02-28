@@ -41,7 +41,7 @@ ScrollTrigger.create({
     trigger: ".contenedor__Animacion",
     start: "top top",
     end: "+=1",
-    markers: true,
+    /* markers: true, */
     scrub: 3,
     pin: true
 });
@@ -52,7 +52,7 @@ ScrollTrigger.create({
     trigger: ".contenedor__Animacion_2",
     start: "+=13%",
     end: "+=1",
-    markers: true,
+    /* markers: true, */
     scrub: 3,
     pin: true
 });
@@ -61,9 +61,9 @@ ScrollTrigger.create({
 ScrollTrigger.create({
     animation: secuencia,
     trigger: ".contenedor__Animacion_3",
-    start: "+=26%",
+    start: "+=14%",
     end: "+=1",
-    markers: true,
+    /* markers: true, */
     scrub: 3,
     pin: true
 });
@@ -72,10 +72,41 @@ ScrollTrigger.create({
 ScrollTrigger.create({
     animation: tl4,
     trigger: ".contenedor__Animacion_4",
-    start: "+=54%",
+    start: "+=15%",
     end: "+=1",
-    markers: true,
+    /* markers: true, */
     scrub: 3,
     pin: true
 });
 
+
+/* var copy = document.querySelector(".logos-slide").cloneNode(true);
+      document.querySelector(".logos").appendChild(copy);
+ */
+
+const scrollers = document.querySelectorAll(".scroller");
+
+// If a user hasn't opted in for recuded motion, then we add the animation
+if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  addAnimation();
+}
+
+function addAnimation() {
+  scrollers.forEach((scroller) => {
+    // add data-animated="true" to every `.scroller` on the page
+    scroller.setAttribute("data-animated", true);
+
+    // Make an array from the elements within `.scroller-inner`
+    const scrollerInner = scroller.querySelector(".scroller__inner");
+    const scrollerContent = Array.from(scrollerInner.children);
+
+    // For each item in the array, clone it
+    // add aria-hidden to it
+    // add it into the `.scroller-inner`
+    scrollerContent.forEach((item) => {
+      const duplicatedItem = item.cloneNode(true);
+      duplicatedItem.setAttribute("aria-hidden", true);
+      scrollerInner.appendChild(duplicatedItem);
+    });
+  });
+}

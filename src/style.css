@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+}
+
+
+.video_portafolio {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
+}
+
+
+.img_contactanos {
+  width: 100%;
+    height: 100%;
+    background-image: url(./images/Contactanos.jpg);
+    background-size: cover;
+    background-position: 50% 20%;
+  
+}
+
+.scroller {
+  width: 80%;
+}
+
+.scroller__inner {
+  height: 55px;
+  padding-block: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.scroller[data-animated="true"] {
+  overflow: hidden;
+  -webkit-mask: linear-gradient(
+    90deg,
+    transparent,
+    white 20%,
+    white 80%,
+    transparent
+  );
+  mask: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+}
+
+.scroller[data-animated="true"] .scroller__inner {
+  width: max-content;
+  flex-wrap: nowrap;
+  animation: scroll var(--_animation-duration, 40s)
+    var(--_animation-direction, forwards) linear infinite;
+}
+
+.scroller[data-speed="slow"] {
+  --_animation-duration: 100s;
+}
+
+.scroller[data-direction="right"] {
+  --_animation-direction: reverse;
+}
+
+@keyframes scroll {
+  to {
+    transform: translate(calc(-50% - 0.5rem));
+  }
+}
+
+.tag-list {
+  margin: 0;
+  padding-inline: 0;
+  list-style: none;
+}
+
+
+
+  ------
+
+ .top_title_company {
+
+    position: absolute;
+    height: 80px;
+    top: 80px;
+ }

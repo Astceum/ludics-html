@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Animation Section Website</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="./style.css" />
     
   </head>
   <body class="overflow-x-hidden no-scrollbar">
@@ -34,13 +34,17 @@
             <div id="container_x" class="w-full h-screen flex overflow-hidden justify-center items-center">
                 <section class="seccion seccio_3 w-1/2 h-screen flex bg-black relative">
                     <img src="./images/portafolio.png" class=" object-left w-full h-screen object-cover" />
-                    <button class=" top-[58%] left-[17%] bg-[#3fa09b] hover:bg-[#22635f] px-14 py-6 rounded-xl mt-2 text-white text-2xl focus:outline-none disabled:gb-indigo-400 absolute">
-                        Ver Más
-                    </button>
-                    
+                    <a href="./pages/portafolio_2/portafolio.html">
+                        <section  class=" top-[58%] left-[17%] bg-[#3fa09b] hover:bg-[#22635f] px-14 py-6 rounded-xl mt-2 text-white text-2xl focus:outline-none disabled:gb-indigo-400 absolute">
+                            Ver Más
+                        </section>
+                    </a>
                 </section>
-                <section class="seccion seccio_4 w-1/2 h-screen flex justify-center items-center bg-emerald-800">
-                    <h2>SECCION 4</h2>
+                <section class="seccion seccio_4 w-1/2 h-screen flex justify-center items-center bg-black">
+                    <video class="video_portafolio" muted autoplay loop>
+                        <source src="./video/Memo-testeo-3-tele.mp4"
+                        type="video/mp4">
+                    </video>
                 </section>
             </div>
         </main>
@@ -57,15 +61,43 @@
             </div>
         </main>
         <main class="contenedor__Animacion_4 w-full h-screen fixed overflow-hidden">
-            <div id="container_y" class="w-full h-screen flex overflow-hidden justify-center items-center">
-                <section class="seccion seccio_7 w-1/2 h-screen flex justify-center items-center bg-[#091B56]">
-                <!-- <section class="seccion seccio_7 w-1/2 h-screen flex justify-center items-center bg-[#720819]"> -->
-                    
-                    
+            <div id="container_y" class="w-screen h-screen relative flex flex-col overflow-hidden justify-center items-center">
+
+                <section class="seccion seccio_8 w-full h-1/2  bg-lime-300">
+                    <img class="img_contactanos" />
                 </section>
-                <section class="seccion seccio_8 w-1/2 h-screen flex justify-center items-center bg-lime-300">
-                    <img src="./images/Contactanos.png" class=" object-left w-full h-screen object-none" />
-                </section>
+
+                <div class="seccion seccio_7 w-screen h-1/2 flex flex-col justify-center items-center relative bg-[#091B56]">
+                    
+                    <img class="top_title_company mb-14" src="./images/titles/Titulo_empresas.png" alt="">
+                    
+                    <div class="scroller" data-speed="slow">
+                        <div class="scroller__inner">
+                            <img src="./images/logos/Afp Modelo.png" />
+                            <img src="./images/logos/Corpgroup.png" />
+                            <img src="./images/logos/Duoc UC.png" />
+                              
+                        </div>
+                    </div>
+                    <div class="scroller" data-speed="slow" data-direction="right">
+                        <div class="scroller__inner">
+                            <img src="./images/logos/Afp Modelo.png" />
+                            <img src="./images/logos/Corpgroup.png" />
+                            <img src="./images/logos/Duoc UC.png" />
+                              
+                        </div>
+                    </div>
+                    <div class="scroller" data-speed="slow">
+                        <div class="scroller__inner">
+                            <img src="./images/logos/Afp Modelo.png" />
+                            <img src="./images/logos/Corpgroup.png" />
+                            <img src="./images/logos/Duoc UC.png" />
+                              
+                        </div>
+                    </div>                    
+                </div>
+                
+                
             </div>
         </main>
     </div>
